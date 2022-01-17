@@ -6,4 +6,5 @@ My plans for this are to maybe have satellites in the game, make planet orbits b
 
 If you're here from the physics project, enjoy! If you randomly stumbled upon this, maybe making it better would be nice :)
 
+# Installation and Running It or Something idk
 In order to view the program, you're going to need to install the Godot game engine, which is available from their website or from Steam. Then, you download this project, and open it in Godot. You can run it to see the simulation in action!
