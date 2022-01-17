@@ -1,0 +1,116 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Peeter.gd" type="Script" id=1]
+[ext_resource path="res://Surol.gd" type="Script" id=2]
+[ext_resource path="res://Space.gd" type="Script" id=3]
+[ext_resource path="res://Tunia.gd" type="Script" id=4]
+[ext_resource path="res://Renoose.gd" type="Script" id=5]
+[ext_resource path="res://Sadorna.gd" type="Script" id=6]
+[ext_resource path="res://WeySUS.gd" type="Script" id=7]
+[ext_resource path="res://Mrusius.gd" type="Script" id=8]
+[ext_resource path="res://Ersuel.gd" type="Script" id=9]
+[ext_resource path="res://Mecules.gd" type="Script" id=10]
+[ext_resource path="res://Camera.gd" type="Script" id=11]
+
+[sub_resource type="CanvasItemMaterial" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 26.5707
+
+[sub_resource type="CanvasItemMaterial" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=6]
+
+[node name="Space (Area2D)" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="Surol (RigidBody2D)2" type="RigidBody2D" parent="."]
+material = SubResource( 5 )
+position = Vector2( 390, 219 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Surol (RigidBody2D)2"]
+material = SubResource( 3 )
+position = Vector2( -1, 1 )
+shape = SubResource( 1 )
+
+[node name="Mecules (RigidBody2D)7" type="RigidBody2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 105, 83 )
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mecules (RigidBody2D)7"]
+material = SubResource( 6 )
+shape = SubResource( 1 )
+
+[node name="WeySUS (RigidBody2D)4" type="RigidBody2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 105, 83 )
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeySUS (RigidBody2D)4"]
+material = SubResource( 6 )
+shape = SubResource( 1 )
+
+[node name="Ersuel (RigidBody2D)6" type="RigidBody2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 105, 83 )
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ersuel (RigidBody2D)6"]
+material = SubResource( 6 )
+shape = SubResource( 1 )
+
+[node name="Mrusius (RigidBody2D)5" type="RigidBody2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 105, 83 )
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mrusius (RigidBody2D)5"]
+material = SubResource( 6 )
+shape = SubResource( 1 )
+
+[node name="Peeter (RigidBody2D)" type="RigidBody2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 105, 83 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Peeter (RigidBody2D)"]
+material = SubResource( 6 )
+shape = SubResource( 1 )
+
+[node name="Sadorna (RigidBody2D)3" type="RigidBody2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 105, 83 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sadorna (RigidBody2D)3"]
+material = SubResource( 6 )
+shape = SubResource( 1 )
+
+[node name="Renoose (RigidBody2D)2" type="RigidBody2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 105, 83 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Renoose (RigidBody2D)2"]
+material = SubResource( 6 )
+shape = SubResource( 1 )
+
+[node name="Tunia (RigidBody2D)" type="RigidBody2D" parent="."]
+material = SubResource( 4 )
+position = Vector2( 105, 83 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tunia (RigidBody2D)"]
+material = SubResource( 6 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2, 2 )
+script = ExtResource( 11 )
+
+[node name="Tween" type="Tween" parent="Camera2D"]
